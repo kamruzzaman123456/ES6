@@ -191,3 +191,16 @@ const results = nummbers .forEach(n=>{
 })
 
 console.log(results);
+
+// filter selects elements based on a condition and retuyrns an array with the elements that rulrilled the condition.And nothing elemant return emt array  
+
+const numsbers = [2,342,33,2,3,2,3,2,];
+
+const selected = numsbers.filter(p=>p>3);
+console.log(selected);
+
+// find selects elements based on a condition and retuyrns an array with the elements that rulrilled the condition.Or give first elemant of array and nothing elemant return undefind  
+
+// reduce
+const sume = numbers.reduce((p,c)=>p+c ,0)
+console.log(sume)
