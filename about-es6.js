@@ -204,3 +204,115 @@ console.log(selected);
 // reduce
 const sume = numbers.reduce((p,c)=>p+c ,0)
 console.log(sume)
+
+// class and inheritance
+
+class Person {
+    // make proparey
+    constructor(name,age){
+        this.name = name ;
+        this.age = age ;
+    }
+    sleep(){
+        console.log(`Sleeping now ${this.name}`);
+    }
+    activity(){
+        this.sleep();
+    }
+}
+
+// call mother class which  inheritanceable
+const kodom =new Person('kodom',21);
+console.log(kodom);
+
+// this use which you want to call on .
+
+// explor this
+// one 
+function example() {
+    console.log(this);
+}
+example();  // In a non-strict mode: this will be the global object (window in browsers)
+
+// two
+// When a function is used as a constructor (using the new keyword), this refers to the newly created object.
+
+function Person(name) {
+    this.name = name;
+}
+
+const person1 = new Person('Bob');
+console.log(person1.name); 
+
+//  call(), apply(), or bind() methods.
+
+function greet() {
+    console.log(`Hello, ${this.name}`);
+}
+
+const persons = { name: 'David' };
+
+greet.call(persons);  // Logs "Hello, David"
+greet.apply(persons);  // Logs "Hello, David"
+
+const greetPerson = greet.bind(person);
+greetPerson();  // Logs "Hello, David"
+
+// dot vs bracket notation
+
+const person = {
+    name:'kodom ali',
+    job:'bakam khai',
+    3:'three',
+    'add-dress': 'kochu khet'
+}
+const prop = 'job'
+console.log(person.job);
+console.log(person['job']);
+console.log(person[prop]);
+console.log(person["add-dress"])
+
+// chin prpoparty in prpoparty?
+// javascript is a dainamic type pograming language
+// thir have two type data : premetiv or non-premetiv
+// corection or conversition
+ 
+
+// make salf closuer
+function stopwatch(){
+    let counter = 0;
+    return function(){
+        counter++;
+        return counter ;
+    }
+}
+
+const watch1 = stopwatch();
+
+console.log(watch1());
+
+// array like objact 
+
+function sum(a,b,c){
+    const argu = [...arguments]
+    const result = a+b+c;
+    return result;
+}
+
+const total = sum(23,34,3,43,34,34,34,34)
+
+console.log(total);
+
+// objact and array are pass by rafarance
+// preamtiv are pass by value
+
+// API mein Application Programming Interface
+
+const user = {id:334,name:'kamrul',job:'programing'}
+
+//JS objact Notation (JSON)
+// Refrom objact to string
+const stringfy = JSON.stringify(user);
+console.log(stringfy);
+// Refrom string to objact
+const makeobjact = JSON.parse(stringfy);
