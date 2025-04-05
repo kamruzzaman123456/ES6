@@ -61,7 +61,7 @@ friends.push(233);
 
 console.log(friends);
 
-console.log(dost);
+// console.log(dost);
 
 // advanced
 const sonkha =[233,...friends,2323545];
@@ -150,7 +150,7 @@ console.log(prothom,thitho);
 // Object.freeze(Object names) 
 
 // Object names .add(proparty)=add(valye)
-// console.log(Object names)
+// console.log(Object names)  
 
 // modyfy but add or remove not alow
 // Object.seal(Object names)
@@ -172,9 +172,9 @@ console.log('num now', num)
 return num * 2;
 }
 
-const result = numbers.map(result)
+const result = numbers.map(doubleIt);
 
-// console.log(result);
+console.log(result);
 
 const doble2 = n => n*2;
 
@@ -204,3 +204,4 @@ console.log(selected);
 // reduce
 const sume = numbers.reduce((p,c)=>p+c ,0)
 console.log(sume)
+
